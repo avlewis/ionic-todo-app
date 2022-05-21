@@ -1,12 +1,12 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { TodoForm } from '../components/Todo/Form';
 
-const TodoManager: React.FC = () => {
+const TodoCreator: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Todo Manager</IonTitle>
+          <IonTitle>Todo Creator</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent >
@@ -16,4 +16,4 @@ const TodoManager: React.FC = () => {
   );
 };
 
-export default TodoManager;
+export default TodoCreator;

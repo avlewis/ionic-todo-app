@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { add, list } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,7 +30,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import TodoManager from './pages/TodoManager';
+import TodoCreator from './pages/TodoCreator';
 import TodoViewer from './pages/TodoViewer'
 import { TodoProvider } from './components/Todo/context';
 
@@ -44,7 +44,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/todo/manager">
-            <TodoManager />
+            <TodoCreator />
           </Route>
           <Route exact path="/todo/list">
             <TodoViewer />
@@ -56,11 +56,11 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="manager" href="/todo/manager">
-            <IonIcon icon={triangle} />
-            <IonLabel>Manager</IonLabel>
+            <IonIcon icon={add} />
+            <IonLabel>Creator</IonLabel>
           </IonTabButton>
           <IonTabButton tab="list" href="/todo/list">
-            <IonIcon icon={square} />
+            <IonIcon icon={list} />
             <IonLabel>List</IonLabel>
           </IonTabButton>
         </IonTabBar>
