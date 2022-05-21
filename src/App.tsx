@@ -33,6 +33,7 @@ import './theme/variables.css';
 import TodoCreator from './pages/TodoCreator';
 import TodoViewer from './pages/TodoViewer'
 import { TodoProvider } from './components/Todo/context';
+import TodoListCountBadge from './components/Todo/ListCountBadge';
 
 setupIonicReact();
 
@@ -62,6 +63,7 @@ const App: React.FC = () => (
           <IonTabButton tab="list" href="/todo/list">
             <IonIcon icon={list} />
             <IonLabel>List</IonLabel>
+            <TodoListCountBadge />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
